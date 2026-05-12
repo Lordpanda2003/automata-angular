@@ -17,6 +17,7 @@ describe('Home', () => {
   });
 
   it('should create', () => {
+    fixture.detectChanges(); // 👈 IMPORTANT
     expect(component).toBeTruthy();
   });
 });
