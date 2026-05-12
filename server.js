@@ -3,11 +3,11 @@ const path = require('path');
 
 const app = express();
 
-const distPath = path.join(__dirname, 'dist/automata');
+const distPath = path.join(__dirname, 'dist/automata/browser');
 
 app.use(express.static(distPath));
 
-app.get('*', (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
